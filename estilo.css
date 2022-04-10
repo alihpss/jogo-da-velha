@@ -1,0 +1,62 @@
+body {
+    background: rgb(65, 128, 187);
+    font: normal 15pt arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow:  3px 3px 10px rgba(0, 0, 0, 0.616);
+}
+
+#turno, #res {
+    width: 33%;
+    margin: 10px auto 25px auto;
+}
+
+#jogo {
+    text-align: center;
+}
+
+.quadrados {
+    display: inline-block;
+    width: 160px;
+    height: 100px;
+    margin: 1px auto;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align:top;
+    line-height: 20px;
+    pointer-events:all;
+    
+}
+
+.disabledbutton {
+    display: inline-block;
+    width: 160px;
+    height: 100px;
+    margin: 1px auto;
+    border: 1px solid black;
+    pointer-events: none;
+    font-size: 78px;
+}
+
+#res {
+    text-align: center;
+    width: 35%;
+    margin: 6px auto 10px auto;
+}
+
+footer { 
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
