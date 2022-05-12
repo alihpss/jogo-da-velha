@@ -1,17 +1,20 @@
-let bloco1 = document.getElementById('div1')
-let bloco2 = document.getElementById('div2')
-let bloco3 = document.getElementById('div3')
-let bloco4 = document.getElementById('div4')
-let bloco5 = document.getElementById('div5')
-let bloco6 = document.getElementById('div6')
-let bloco7 = document.getElementById('div7')
-let bloco8 = document.getElementById('div8')
-let bloco9 = document.getElementById('div9')
+let conta = 0;
 
-let turno = document.getElementById('turno')
+let turno = document.getElementById('turno');
+
 let res = document.getElementById('res')
 
-let conta = 0
+let blocos = [
+document.getElementById('div1'),
+document.getElementById('div2'),
+document.getElementById('div3'),
+document.getElementById('div4'),
+document.getElementById('div5'),
+document.getElementById('div6'),
+document.getElementById('div7'),
+document.getElementById('div8'),
+document.getElementById('div9')
+]; 
 
 turno.textContent = ('Vez do jogador: X')
 
@@ -26,67 +29,21 @@ function definirTurno(conta) {
     }
 }
 
-function rodar1() {
-    conta++
-    valorDoBloco(bloco1);
-}
-
-
-function rodar2() {
-    conta++
-    valorDoBloco(bloco2);
-}
-
-function rodar3() {
-    conta++
-    valorDoBloco(bloco3);
-}
-
-function rodar4() {
-    conta++
-    valorDoBloco(bloco4);
-}
-
-function rodar5() {
-    conta++
-    valorDoBloco(bloco5);
-}
-
-function rodar6() {
-    conta++
-    valorDoBloco(bloco6);
-}
-
-function rodar7() {
-    conta++
-    valorDoBloco(bloco7);
-}
-
-function rodar8() {
-    conta++
-    valorDoBloco(bloco8);
-}
-
-function rodar9() {
-    conta++
-    valorDoBloco(bloco9);
-
-}
+blocos.forEach(function(bloco){
+    bloco.onclick = function () {
+        valorDoBloco(bloco);
+        conta++
+    }
+})
 
 function reset () {
     if (conta > 0){
 
         conta = 0
 
-        limparBlocos(bloco1)
-        limparBlocos(bloco2)
-        limparBlocos(bloco3)
-        limparBlocos(bloco4)
-        limparBlocos(bloco5)
-        limparBlocos(bloco6)
-        limparBlocos(bloco7)
-        limparBlocos(bloco8)
-        limparBlocos(bloco9)
+        for ( let i = 0; i < blocos.length; i++){
+            limparBlocos(blocos[i])
+        }
 
         turno.textContent = ('Vez do jogador: X')
         res.innerHTML = ''
@@ -118,7 +75,7 @@ function valorDoBloco (atual){
     }
 
     if (res.innerText != 'Jogador: X venceu!' & res.innerText != 'Jogador: O venceu!' & res.innerText != 'Empate!'){
-    resultado(bloco1, bloco2, bloco3, bloco4, bloco5, bloco6, bloco7, bloco8, bloco9)
+    resultado(blocos[0], blocos[1], blocos[2], blocos[3], blocos[4], blocos[5], blocos[6], blocos[7], blocos[8])
     }
     atual.setAttribute('class', 'disabledbutton')
 }
