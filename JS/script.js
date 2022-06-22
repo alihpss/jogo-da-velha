@@ -51,7 +51,7 @@ function valorDoBloco (atual){
 function resultado (a1, a2, a3, b1, b2, b3, c1, c2, c3) {
     if (verificarResultadoX(a1,a2,a3) || verificarResultadoX(b1,b2,b3)|| verificarResultadoX(c1,c2,c3) || verificarResultadoX(a1,b1,c1) ||verificarResultadoX(a2,b2,c2) || verificarResultadoX(a3,b3,c3)|| verificarResultadoX(a1,b2,c3)|| verificarResultadoX(a3,b2,c1)){
 
-        resultadoModal (`Vencedor: Jogador: X`, '#00ff48', '0', '', 'auto 3rem');
+        resultadoModal (`Vencedor: Jogador: X`, '#57c777', '0', '', 'auto 3rem');
         desativarTodasCaixas();
         placarX++ ;
         contarX.innerText = (placarX);
