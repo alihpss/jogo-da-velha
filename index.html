@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo exercício 1</title>
+    <title>Jogo da velha</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -14,6 +14,17 @@
     </header>
 
     <section>
+        <div id="contadores">
+            <div id="contadorX">
+                Contador X:
+                <p id="contX">0</p>
+            </div>
+            <div id="contadorO">
+                Contador O:
+                <p id="contO">0</p>
+            </div>
+        </div>
+        
         <div id="turno"></div>
 
         <div id="jogo">
@@ -28,8 +39,10 @@
             <div class="quadrados" id="div8"></div>
             <div class="quadrados" id="div9"></div>
 
-            <input type="button" value="Resetar" onclick="reset()">
+
         </div>
+
+        <input type="button" value="Resetar" onclick="reset()" id="reset">
 
         <div id="res">
 
