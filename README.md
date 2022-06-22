@@ -12,7 +12,7 @@ Jogo da velha
 A versão final do projeto pode ser visualizada em https://alihpss.github.io/jogo-da-velha/
 # descrição-do-projeto 
 
-Um projeto feito com HTML, CSS e JavaScript que tem como objetivo criar um jogo da velha através para diversão. 
+Um projeto feito com HTML, CSS e JavaScript que tem como objetivo criar um jogo da velha através de Javascript para diversão. 
 
 # status-do-Projeto
 O projeto encontra-se finalizado. 
